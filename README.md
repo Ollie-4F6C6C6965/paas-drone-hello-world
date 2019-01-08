@@ -18,6 +18,9 @@ _This tutorial assumes you have [drone CLI installed](https://docs.drone.io/cli/
 drone encrypt REPO_USERNAME/REPO_NAME USERNAME
 drone encrypt REPO_USERNAME/REPO_NAME PASSWORD
 ```
+
+_If you get `client error 500: {"message":"sql: no rows in result set"}` the repo is probably not activated on drone._
+
 4) Edit [.drone.yml](.drone.yml), filling out the GPAAS_APP_NAME, GPAAS_ORG, GPAAS_SPACE, GPAAS_API and set the outputs from the above commands at the bottom:
 ```
 ---
