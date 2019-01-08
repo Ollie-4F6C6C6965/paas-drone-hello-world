@@ -2,17 +2,20 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
-  image: python
+- name: cf-deploy
+  image: governmentpaas/cf-cli
   environment:
-    TEST_ENV_PLAIN: Testing the environment variables.
-    TEST_ENV_ENC:
-      from_secret: test
+    GPAAS_USER:
+      from_secret: gpaas_user
+    GPAAS_PASS:
+      from_secret: gpaas_pass
+    GPAAS_ORG: gds-tech-ops
+    GPAAS_SPACE: sandbox
   commands:
-  - pip install -r requirements.txt
-  - python test.py
+  - bash deploy-paas.sh
 
 ---
 kind: secret
 data:
-  test: Vij5eGL77bY6SsLiGhB_FeH0xxFiGTKXx2NRr9KjLZ5DWRldzzcEtSxNmB1_yZcctVY=
+  gpaas_user: 8t16mUfwrLKoqcotYn-nL3N5bkf1AYo-GZcBXVG-Ga_5XGooTHAioh5L-CZ4TDDP5v2_IsmMR75w-2cvNKhZgyusdclZ49cW7BWT9y6bK1_j
+  gpaas_pass: ACmmZqRi7y890_XSlixIbXhGkB_dABQ0tGorZNHk
