@@ -5,6 +5,7 @@ steps:
 - name: cf-deploy
   image: governmentpaas/cf-cli
   environment:
+    GPAAS_APP_NAME: paas-drone-hello-world
     GPAAS_USER:
       from_secret: gpaas_user
     GPAAS_PASS:
@@ -13,6 +14,7 @@ steps:
     GPAAS_SPACE: sandbox
     GPAAS_API: api.cloud.service.gov.uk
   commands:
+  - sed 's/\$GPAAS_APP_NAME/'$GPAAS_APP_NAME'/' manifest.yml
   - bash deploy-paas.sh
 
 ---

@@ -11,5 +11,5 @@ cf login -a $GPAAS_API -u $GPAAS_USER -p "$GPAAS_PASS"
 # set the target
 cf target -o $GPAAS_ORG -s $GPAAS_SPACE
 
-# list the apps
-cf apps
+# push the apps
+cf push $GPAAS_APP_NAME

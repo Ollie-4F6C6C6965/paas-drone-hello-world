@@ -1,0 +1,5 @@
+---
+applications:
+- name: $GPAAS_APP_NAME
+  memory: 20M
+  buildpack: staticfile_buildpack
