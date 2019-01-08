@@ -19,4 +19,4 @@ steps:
 kind: secret
 data:
   gpaas_user: 8t16mUfwrLKoqcotYn-nL3N5bkf1AYo-GZcBXVG-Ga_5XGooTHAioh5L-CZ4TDDP5v2_IsmMR75w-2cvNKhZgyusdclZ49cW7BWT9y6bK1_j
-  gpaas_pass: ACmmZqRi7y890_XSlixIbXhGkB_dABQ0tGorZNHk
+  gpaas_pass: DhnL2Vy282jE9f-DdI6tDE6tkilgmC3YapMdI2Rkm8qTUD-PI6QT13QZA2wYMVC2Sa0NISV7ggYyJzK_gEfG
