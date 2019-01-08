@@ -11,6 +11,7 @@ steps:
       from_secret: gpaas_pass
     GPAAS_ORG: gds-tech-ops
     GPAAS_SPACE: sandbox
+    GPAAS_API: api.cloud.service.gov.uk
   commands:
   - bash deploy-paas.sh
 

@@ -5,6 +5,9 @@ then
       exit 1
 fi
 
+# set api endpoint
+cf login -a $GPAAS_API -u $GPAAS_USER
+
 # log in to Cloud Foundry
 cf login -u $GPAAS_USER -p "$GPAAS_PASS"
 
